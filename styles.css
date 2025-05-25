@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+  background-color: #0077cc;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a, nav button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav button {
+  margin-left: auto;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #1f1f1f;
+  color: #f4f4f4;
+}
+
+body.dark nav {
+  background-color: #333;
+}
+
+body.dark .box {
+  background-color: #2d2d2d;
+}
+
+body.dark input,
+body.dark button,
+body.dark textarea {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+}
+
+/* Layout Page Styles */
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.box {
+  background: #48c9b0;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* To-Do Styles */
+.todo-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-container input {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+.todo-container button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo-container {
+    flex-direction: column;
+  }
+
+  .todo-container input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | My Web Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="contact.html">Contact</a>
+    <a href="todo.html">To-Do</a>
+    <a href="layout.html">Layout</a>
+    <button onclick="toggleDarkMode()" id="themeToggle">🌙</button>
+  </nav>
+
+  <main class="landing">
+    <h1>🌐 Welcome to My Web Project</h1>
+    <p>This is a complete responsive web experience using HTML, CSS, and JavaScript.</p>
+
+    <div class="features">
+      <div class="feature-card">
+        <h2>📋 Form Validation</h2>
+        <p>Input validation with JavaScript for clean data handling and security.</p>
+        <a href="contact.html" class="btn">Try Form</a>
+      </div>
+      <div class="feature-card">
+        <h2>✅ Dynamic To-Do List</h2>
+        <p>Create and manage your daily tasks in a clean interface.</p>
+        <a href="todo.html" class="btn">Go To-Do</a>
+      </div>
+      <div class="feature-card">
+        <h2>🖼️ Responsive Layout</h2>
+        <p>View modern layout built using CSS Grid and Flexbox.</p>
+        <a href="layout.html" class="btn">View Layout</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const icon = document.getElementById("themeToggle");
+      icon.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+  </script>
+</body>
+</html>

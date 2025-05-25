@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="contact.html">Contact</a>
+    <a href="todo.html">To-Do</a>
+    <button onclick="toggleDarkMode()" id="themeToggle">🌙</button>
+  </nav>
+
+  <main class="layout-grid">
+    <section class="box">
+      <h2>🌟 Introduction</h2>
+      <p>This web project demonstrates modular design using HTML, CSS Grid, and Flexbox for dynamic and responsive layouts.</p>
+    </section>
+    <section class="box">
+      <h2>💡 Key Features</h2>
+      <ul>
+        <li>✔️ Form validation with clean UI</li>
+        <li>✔️ Dark mode for accessibility</li>
+        <li>✔️ Responsive layout using media queries</li>
+        <li>✔️ JavaScript DOM manipulation</li>
+      </ul>
+    </section>
+    <section class="box">
+      <h2>📐 Technologies Used</h2>
+      <p>HTML5, CSS3 (Flexbox & Grid), JavaScript (ES6), Responsive Design, and Light/Dark Mode switching.</p>
+    </section>
+    <section class="box">
+      <h2>📞 Get in Touch</h2>
+      <p>You can contact the developer through the contact page. Feedback and suggestions are welcome!</p>
+    </section>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const icon = document.getElementById("themeToggle");
+      icon.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+  </script>
+</body>
+</html>
